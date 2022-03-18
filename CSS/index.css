@@ -1,0 +1,586 @@
+:root {
+    --FirstColor:#063970 ;
+    --SecondColor:#e28743;
+    --ThirdColor: #76b5c5 ;
+    --FourtyColor: #eeeee4 ;
+    --Transition: 1s;
+}
+html {
+    scroll-behavior: smooth;
+}
+.Header {
+    width: 100%;
+    padding: 0;
+    background-image: url("../Images/Image-5.jpg");
+    height: 880px;
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+}
+.Header .Container {
+    position: relative;
+}
+.Header .Container::before ,
+.Header .Container::after {
+    content: "Z";
+    position: absolute;
+    top: 70%;
+    padding: 5px;
+    color: var(--FourtyColor);
+}
+.Header .Container::before {
+    left: 10px;
+}
+.Header .Container::after {
+    right: 10px;
+}
+.Header .Container header {
+    width: 96%;
+    padding: 2%;
+    color: var(--FourtyColor);
+    display: grid;
+    grid-template-columns: 3% 40% 1fr 3%;
+    gap: 10px;
+    border-bottom: 1px solid var(--FourtyColor);
+}
+.Header .Container header > i {
+    margin-top: 6px;
+}
+.Header .Container header > h1 {
+    margin: 0;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Header .Container header > ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    gap: 6px;
+}
+.Header .Container header > ul > li > a {
+    font-size: 20px;
+    color: var(--FourtyColor);
+    text-decoration: none;
+    transition: var(--Transition);
+}
+.Header .Container header > ul > li > a:hover {
+    color: var(--SecondColor);
+}
+.Header .Container > div {
+    width: 50%;
+    margin-top: calc(50% - 470px );
+    padding: 50px;
+    color: var(--FourtyColor);
+    background-color: rgb(6, 57, 112 , 0.8);
+}
+.Header .Container > div > h2 {
+    font-size: 40px;
+}
+.Header .Container > div > p {
+    line-height: 1.7;
+    font-size: 18px;
+    color: var(--ThirdColor);
+}
+.Header .Container > span{
+    position: absolute;
+    bottom: -35%;
+    z-index: 2;
+    left: calc(50% - 40px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Header .Container > span > p{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 1px solid var(--FourtyColor);
+    margin: 5px;
+}
+.Header .Container > span > p:nth-of-type(2) {
+    background-color: var(--SecondColor);
+}
+
+
+
+
+.Services {
+    text-align: center;
+    margin-top: 200px;
+}
+.Services h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Services p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+}
+.Services .Container {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(500px , 1fr));
+    gap: 50px;
+}
+.Services .Container div {
+    padding: 20px;
+}
+.Services .Container div > i {
+    margin: 20px;
+}
+.Services .Container div > b {
+    font-size: 25px;
+    color: var(--SecondColor);
+}
+.Services .Container div > p {
+    margin-left: 120px;
+}
+
+
+
+
+.Qualities {
+    width: 100%;
+    padding: 0;
+    background-image: url("../Images/Image-1.jpg");
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.Qualities .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(500px , 1fr));
+    gap: 50px;
+}
+.Qualities .Container > div {
+    padding: 50px;
+}
+.Qualities .Container > div > img {
+    width: 100%;
+    height: 60%;
+    margin-top: 40%;
+}
+.Qualities .Container > div:last-of-type{
+    background-color: var(--SecondColor);
+    opacity: 0.8;
+}
+.Qualities .Container > div > h1 {
+    font-size: 30px;
+    color: var(--FirstColor);
+}
+.Qualities .Container > div > ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-rows: repeat(4 , auto);
+    align-items: center;
+}
+.Qualities .Container > div > ul > li {
+    align-items: center;
+    color: var(--FirstColor);
+}
+.Qualities .Container > div > ul > li > p , 
+.Qualities .Container > div > ul > li > i {
+    display: inline-block;
+    padding: 5px;
+}
+.Qualities .Container > div > ul > li > p {
+    font-size: 20px;
+}
+
+
+
+.Portfoilo {
+    text-align: center;
+    margin-top: 200px;
+}
+.Portfoilo > h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Portfoilo > div {
+    margin: 50px auto;
+}
+.Portfoilo > div > span {
+    padding: 10px;
+    margin: 5px;
+    color: var(--SecondColor);
+    border: 1px solid var(--SecondColor);
+}
+.Portfoilo > div > span:first-of-type {
+    color: var(--FirstColor);
+    background-color: var(--SecondColor);
+}
+.Portfoilo > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+}
+.Portfoilo .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(253px , 1fr));
+}
+.Portfoilo .Container > div {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.Portfoilo .Container > div > img {
+    width: 100%;
+    height: 100%;
+    transition: var(--Transition);
+}
+.Portfoilo .Container > div > span {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 65%;
+    height: 30%;
+    z-index: 2;
+    color: var(--FirstColor);
+    padding: 10px 60px;
+    font-size: 20px;
+    background-color: var(--FourtyColor);
+    transition: var(--Transition);
+    display: none;
+}
+.Portfoilo .Container > div > span > p {
+    color: var(--ThirdColor);
+}
+.Portfoilo .Container > div:hover img {
+    transform: rotateZ(10deg) scale(1.4 , 1.4);
+    
+}
+.Portfoilo .Container > div:hover > span {
+    display: block;
+}
+.Portfoilo button {
+    padding: 10px 25px;
+    color: var(--FirstColor);
+    border: none;
+    background-color: var(--SecondColor);
+    font-size: 23px;
+}
+
+.Awesome {
+    width: 100%;
+    padding: 0;
+    background-image: url("../Images/Image-4.jfif");
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+}
+.Awesome .Container  {
+    margin-top: 80px;
+    position: relative;
+    height: 100%;
+}
+.Awesome .Container > div {
+    position: absolute;
+    padding: 4% ;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 92%;
+    background-color: var(--SecondColor);
+    opacity: 0.7;
+}
+.Awesome .Container > div > h1 {
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Awesome .Container > div > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--FirstColor);
+}
+.Awesome .Container > div > button {
+    padding: 10px 25px;
+    color: var(--FourtyColor);
+    border: none;
+    background-color: var(--FirstColor);
+    font-size: 23px;
+}
+
+
+
+.AboutUs {
+    text-align: center;
+    margin-top: 200px;
+}
+.AboutUs > h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.AboutUs > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+    margin: 50px auto;
+}
+.AboutUs .Container {
+    width: 100%;
+    height: 600px;
+}
+.AboutUs .Container img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.Numbers .Container {
+    background-color: var(--FirstColor);
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(250px , 1fr));
+    gap: 50px;
+    justify-content: space-around;
+    text-align: center;
+}
+.Numbers .Container > div {
+    display: grid;
+    grid-template-rows: repeat(auto-fill , auto);
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.Numbers .Container > div i {
+    color: var(--SecondColor);
+    margin: 20px 50px 10px ;
+    background-color: var(--FourtyColor);
+    border-radius: 100%;
+    padding: 5px;
+}
+.Numbers .Container > div > span {
+    font-size: 40px;
+    color: var(--FourtyColor);
+}
+.Numbers .Container > div > p {
+    font-size: 20px;
+    color: var(--SecondColor);
+}
+
+
+.Testimonials {
+    text-align: center;
+    margin-top: 200px;
+}
+.Testimonials > h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Testimonials > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+    margin: 50px 30px;
+}
+.Testimonials .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px , 1fr));
+    gap: 50px;
+}
+.Testimonials .Container > div {
+    background-color: var(--ThirdColor);
+    margin-top: 30px;
+}
+.Testimonials .Container > div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: -50px;
+    border: 15px solid white;
+}
+.Testimonials .Container > div blockquote {
+    font-size: 20px;
+    line-height: 1.4;
+}
+.Testimonials .Container > div b {
+    float: right;
+    width: 20;
+    padding: 3%;
+    font-size: 20px;
+    color: var(--FourtyColor);
+} 
+.Testimonials > span{
+    margin: 30px auto 30px  calc(50% - 55px);
+    display: flex;
+    flex-direction: row;
+
+}
+.Testimonials > span > p{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 1px solid var(--FirstColor);
+    margin: 5px;
+}
+.Testimonials > span > p:nth-of-type(2) {
+    background-color: var(--FirstColor);
+}
+
+
+
+.Skills {
+    text-align: center;
+    margin-top: 200px;
+}
+.Skills > h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.Skills > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+    margin: 50px 30px;
+}
+.Skills .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,minmax(500px , 1fr));
+    gap: 50px;
+    text-align: left;
+}
+.Skills .Container > div {
+    padding: 20PX;
+}
+.Skills .Container > div > h3 {
+    font-size: 25px;
+    color: var(--FirstColor);
+}
+.Skills .Container > div > span {
+    padding: 15px 50%;
+    background-color: var(--SecondColor);
+    position: relative;
+    border-radius: 20px;
+}
+.Skills .Container > div > span::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--FirstColor);
+    border-radius: 20px;
+}
+.Skills .Container > div > span::after {
+    content: " 90% ";
+    position: absolute;
+    width: 50px ;
+    height: 50px ;
+    top: -100%;
+    right: 20%;
+    background-color: var(--FirstColor);
+    border-radius: 100%;
+    color: var(--SecondColor);
+    font-size: 20px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ContactUs {
+    text-align: center;
+    margin-top: 200px;
+}
+.ContactUs > h1 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FirstColor);
+}
+.ContactUs > p {
+    line-height: 1.7;
+    font-size: 20px;
+    color: var(--ThirdColor);
+    margin: 50px 30px;
+}
+.ContactUs .Container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.ContactUs .Container > div > form {
+    display: grid;
+    grid-template-rows: repeat(auto-fill , auto );
+    gap: 50px;
+}
+.ContactUs .Container > div > form > input ,
+.ContactUs .Container > div > form > textarea {
+    width: 70%;
+    padding: 1%;
+    margin: 10px 14%;
+    border: none;
+    box-shadow: 5px 5px 5px var(--FourtyColor);
+}
+.ContactUs .Container > div > form > input:last-of-type {
+    width: 20%;
+    margin: 10px 40%;
+    background-color: var(--FirstColor);
+    color: var(--FourtyColor);
+    font-size: 20px;
+    border-radius: 20px;
+}
+.ContactUs .Container > div:last-of-type{
+    display: grid;
+    grid-template-rows: repeat(auto-fill , auto );
+    gap: 50px;
+}
+.ContactUs .Container > div:last-of-type  > div {
+    padding: 20px;
+}
+.ContactUs .Container > div:last-of-type  > div > h3 {
+    font-size: 25px;
+    color: var(--FirstColor);
+}
+.ContactUs .Container > div:last-of-type  > div > span{
+    display: inline-block;
+    width: 80%;
+    margin: 10px 10%;
+    line-height: 1.4;
+    font-size: 20px;
+    color: var(--ThirdColor);
+}
+
+footer {
+    width: 100%;
+    padding: 0;
+    background-image: url("../Images/Image-6.jpg");
+    background-size: 100% 100% ;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+footer .Container {
+    padding: 20px;
+}
+footer .Container h1 , 
+footer .Container  h2 {
+    margin: 30px auto;
+    font-size: 40px;
+    color: var(--FourtyColor);
+}
+footer .Container hr {
+    width: 40%;
+    height: 3px;
+    margin: 20px 30%;
+    background-color: var(--FirstColor);
+}
+footer .Container > ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4 , 20%);
+    width: 40%;
+    margin: 25px 30%;
+}
+footer .Container > ul > li > a {
+    color: var(--SecondColor);
+}
+footer .Container span {
+    padding: 20px;
+    margin: 80px auto;
+    font-size: 20px;
+    color: var(--FirstColor);
+}
