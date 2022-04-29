@@ -8,6 +8,34 @@
 html {
     scroll-behavior: smooth;
 }
+@media(max-width:800px){
+    .Header .Container header {
+        display: block !important;
+    }
+    .Header .Container header i ,
+    .Header .Container header h1{
+        width: 10%;
+        display: inline-block;
+    }
+    .Header .Container header ul {
+        width:96% ;
+        padding-left: 2%;
+
+    }
+    .Header .Container > div {
+        margin-top: 100px  !important;
+    }
+    .Header .Container > span{
+        bottom: -10% !important;
+    }
+    .ContactUs .Container {
+        display: block !important;
+    }
+    .ContactUs .Container > div {
+        width: 80% !important;
+        padding: 10%;
+    }
+}
 .Header {
     width: 100%;
     padding: 0;
@@ -19,10 +47,16 @@ html {
 .Header .Container {
     position: relative;
 }
+.Header .Container::before {
+    content: "<";
+}
+.Header .Container::after {
+    content: ">";
+}
 .Header .Container::before ,
 .Header .Container::after {
-    content: "Z";
     position: absolute;
+    font-size: x-large;
     top: 70%;
     padding: 5px;
     color: var(--FourtyColor);
